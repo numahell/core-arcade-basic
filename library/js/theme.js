@@ -58,10 +58,10 @@
             .on( 'resize.title-card', function() {
                 window_width = $window.width();
 				window_height = ( $( 'body' ).hasClass( 'admin-bar' ) ) ? $window.height() - 32 : $window.height();
-				if ( window_width < 1179 || ! $( 'body' ).hasClass( 'home' ) || ( $( 'body' ).hasClass( 'home' ) && $( 'body' ).hasClass( 'paged' ) ) ) {
+				if ( window_width < 1179 || ( $( 'body' ).hasClass( 'home' ) && $( 'body' ).hasClass( 'paged' ) ) ) {
 					$card.css( 'height', 300 );
 					$more_site.removeData( 'scroll-to' ).attr( 'data-scroll-to', 300 );
-				} else if ( window_width < 1599 || ! $( 'body' ).hasClass( 'home' ) || ( $( 'body' ).hasClass( 'home' ) && $( 'body' ).hasClass( 'paged' ) ) ) {
+				} else if ( window_width < 1599 || ! $( 'body' ).hasClass( 'home' )  ) {
 					$card.css( 'height', 500 );
 					$more_site.removeData( 'scroll-to' ).attr( 'data-scroll-to', window_height );
 				} else {
