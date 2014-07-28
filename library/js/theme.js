@@ -61,8 +61,11 @@
 				if ( window_width < 1179 || ( $( 'body' ).hasClass( 'home' ) && $( 'body' ).hasClass( 'paged' ) ) ) {
 					$card.css( 'height', 300 );
 					$more_site.removeData( 'scroll-to' ).attr( 'data-scroll-to', 300 );
-				} else if ( window_width < 1599 || ! $( 'body' ).hasClass( 'home' )  ) {
+				} else if ( window_width < 1349 ) {
 					$card.css( 'height', 500 );
+					$more_site.removeData( 'scroll-to' ).attr( 'data-scroll-to', window_height );
+				} else if ( window_width < 1599 || ! $( 'body' ).hasClass( 'home' )  ) {
+					$card.css( 'height', 600 );
 					$more_site.removeData( 'scroll-to' ).attr( 'data-scroll-to', window_height );
 				} else {
 					$card.css( 'height', 700 );
